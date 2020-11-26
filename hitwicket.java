@@ -10,13 +10,16 @@ class  Node{
 	}
 }
 public class hitwicket {
+	static String mat[][];
+	static HashMap<String,Node> seta;
+	static HashMap<String,Node> setb;
 	public static void main(String args[]) {
-		String mat[][]=new String[5][5];
+		mat=new String[5][5];
 		Scanner sc=new Scanner(System.in);
 		String ip1=sc.nextLine();
 		String ip11[]=ip1.split(",");
-		HashMap<String,Node> seta=new HashMap<>();
-		HashMap<String,Node> setb=new HashMap<>();
+		 seta=new HashMap<>();
+		 setb=new HashMap<>();
 		for(int i=0;i<5;i++){
 			String a="A-"+ip11[i];
 			mat[0][i]=a;
@@ -251,8 +254,8 @@ public class hitwicket {
 								}
 								System.out.println();
 							}
-							seta.put(player,new Node(newx,newy));
-							setb.remove(remplayer);
+							setb.put(player,new Node(newx,newy));
+							seta.remove(remplayer);
 						}
 						else if(mat[newx][newy]!=null && (mat[newx][newy].equals("B-p1") || mat[newx][newy].equals("B-p2") || mat[newx][newy].equals("B-p3") ||mat[newx][newy].equals("B-p4") || mat[newx][newy].equals("B-p5"))) {
 							System.out.println("Invalid Move choose again");
@@ -292,8 +295,8 @@ public class hitwicket {
 								}
 								System.out.println();
 							}
-							seta.put(player,new Node(newx,newy));
-							setb.remove(remplayer);
+							setb.put(player,new Node(newx,newy));
+							seta.remove(remplayer);
 						}
 						else if(mat[newx][newy]!=null && (mat[newx][newy].equals("B-p1") || mat[newx][newy].equals("B-p2") || mat[newx][newy].equals("B-p3") ||mat[newx][newy].equals("B-p4") || mat[newx][newy].equals("B-p5"))) {
 							System.out.println("Invalid Move choose again");
@@ -333,8 +336,8 @@ public class hitwicket {
 								}
 								System.out.println();
 							}
-							seta.put(player,new Node(newx,newy));
-							setb.remove(remplayer);
+							setb.put(player,new Node(newx,newy));
+							seta.remove(remplayer);
 						}
 						else if(mat[newx][newy]!=null && (mat[newx][newy].equals("B-p1") || mat[newx][newy].equals("B-p2") || mat[newx][newy].equals("B-p3") ||mat[newx][newy].equals("B-p4") || mat[newx][newy].equals("B-p5"))) {
 							System.out.println("Invalid Move choose again");
@@ -375,8 +378,8 @@ public class hitwicket {
 								}
 								System.out.println();
 							}
-							seta.put(player,new Node(newx,newy));
-							setb.remove(remplayer);
+							setb.put(player,new Node(newx,newy));
+							seta.remove(remplayer);
 						}
 						else if(mat[newx][newy]!=null && (mat[newx][newy].equals("B-p1") || mat[newx][newy].equals("B-p2") || mat[newx][newy].equals("B-p3") ||mat[newx][newy].equals("B-p4") || mat[newx][newy].equals("B-p5"))) {
 							System.out.println("Invalid Move choose again");
@@ -400,7 +403,6 @@ public class hitwicket {
 				}
 			}
 		}
-	/*for(Node a:seta.values()) {
-		System.out.println(a.x+" "+a.y);*/
+
 	}
 }
